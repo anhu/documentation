@@ -24,5 +24,16 @@ jobs:
         with:
           check_filenames: true
           check_hidden: true
-          ignore_word_list: TE,Thi$,inter-operability,*regist
+          # Words below are false positives, not typos:
+          #   TE            - FIPS test requirement IDs, e.g. "TE.09.09.02"
+          #   Thi           - from the example password "Thi$i$myPa$$w0rd"
+          #   regist        - parameter name in wolfMQTT (SN_Register *regist)
+          #   Writen        - Writen() wrapper from "Unix Network Programming"
+          #   Challener     - author name (Challener D., A Practical Guide to TPM 2.0)
+          #   cant          - verbatim wolfSSL error string "cant decode peer key"
+          #   mot           - Renesas skmt.exe -filetype "mot" (Motorola S-record)
+          #   callin        - verbatim wolfSentry example output
+          #   Incomming     - verbatim lwIP echoserver example output
+          #   psuedo        - verbatim wolfSSH client --help output
+          ignore_words_list: TE,Thi,inter-operability,regist,Writen,Challener,cant,mot,callin,Incomming,psuedo
           skip: '.git'

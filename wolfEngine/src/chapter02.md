@@ -1,4 +1,4 @@
-# OpenSSL Version Compatability
+# OpenSSL Version Compatibility
 
 wolfEngine has been tested against the following versions of OpenSSL. wolfEngine may work with other versions, but may require some modification or adjustment:
 

@@ -20,7 +20,7 @@ described:
 
 ## Dependencies
 
-In its default build, wolfSentry depends on a POSIX runtime, specifically the heap allocator, clock_gettime, stdio, semaphore, and string APIs. However, these dependencies can be avoided with various build-time options. In paticular, the recipe
+In its default build, wolfSentry depends on a POSIX runtime, specifically the heap allocator, clock_gettime, stdio, semaphore, and string APIs. However, these dependencies can be avoided with various build-time options. In particular, the recipe
 
 ```sh
 make STATIC=1 SINGLETHREADED=1 NO_STDIO=1 EXTRA_CFLAGS='-DWOLFSENTRY_NO_CLOCK_BUILTIN -DWOLFSENTRY_NO_MALLOC_BUILTIN'
@@ -95,7 +95,7 @@ The following table lists the possible options:
 | `WOLFSENTRY_NO_ERROR_STRINGS` | Disable error code to error string functions |
 | `WOLFSENTRY_NO_MALLOC_BUILTINS` | Disable builtin malloc functions |
 | `WOLFSENTRY_HAVE_NONGNU_ATOMICS` | Atomics are non-GNU (ignored if `SINGLETHREADED` is set) |
-| `WOLFSENTRY_NO_CLOCK_BUILTIN` | Do not use bulitin time functions |
+| `WOLFSENTRY_NO_CLOCK_BUILTIN` | Do not use built-in time functions |
 | `WOLFSENTRY_LWIP` | wolfSentry is being built against LWIP instead of BSD sockets |
 | `FREERTOS` | Build with FreeRTOS support |
 

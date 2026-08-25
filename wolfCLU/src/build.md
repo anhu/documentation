@@ -14,7 +14,7 @@ sudo make install
 Note that if parsing PKCS12 files with RC2 or if using CRL the flags --enable-rc2 and --enable-crl would also need to be used when building wolfSSL.
 
 
-Then build wolfCLU linking agianst the wolfSSL library created.
+Then build wolfCLU linking against the wolfSSL library created.
 
 ```
 cd wolfclu

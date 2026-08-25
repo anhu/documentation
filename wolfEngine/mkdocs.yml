@@ -5,7 +5,7 @@ site_dir: html/
 copyright: Copyright © 2022 wolfSSL Inc.
 nav:
     - "1. Introduction": index.md
-    - "2. OpenSSL Version Compatability": chapter02.md
+    - "2. OpenSSL Version Compatibility": chapter02.md
     - "3. Building wolfEngine": chapter03.md
     - "4. FIPS 140-2 Support": chapter04.md
     - "5. Engine Control Commands": chapter05.md

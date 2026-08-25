@@ -1507,7 +1507,7 @@ c
 
 Supports K64 and K82 with crypto hardware acceleration.
 
-### Buld options
+### Build options
 
 See `/config/examples/kinetis-k82f.config` for example configuration.
 
@@ -2133,7 +2133,7 @@ Default Onboard Flash Memory Layout (2MB) (32KB sector):
 | wolfBoot          | 0xFFFF0000 | 0x00010000 ( 64 KB) |
 
 
-### Renesas Data Endianess
+### Renesas Data Endianness
 
 To switch RX parts to big endian data use:
 
@@ -2184,7 +2184,7 @@ rfp-cli -if fine -t e2l -device RX65x -auto -auth id FFFFFFFFFFFFFFFFFFFFFFFFFFF
     -run
 ```
 
-Note: Endianess: if using big endian add `-endian big`
+Note: Endianness: if using big endian add `-endian big`
 
 Note: Linux Install E2 Lite USB Driver:
 
@@ -2195,7 +2195,7 @@ sudo udevadm control --reload-rules
 
 ### Debugging Renesas RX65N
 
-Create a new "Renesas Debug" project. Choose the "E2 Lite" emulator and the built `wolfboot.elf`. After project is created open the "Debug Configuration" and change the debugger interface from "JTAG" to "FINE". Run debug and it will stop in the "reset" code in `boot_renesas_start.S`. If using Big Endian change endianess mode in "Debugger -> Debug Tool Settings -> Memory Endian -> Big Endian".
+Create a new "Renesas Debug" project. Choose the "E2 Lite" emulator and the built `wolfboot.elf`. After project is created open the "Debug Configuration" and change the debugger interface from "JTAG" to "FINE". Run debug and it will stop in the "reset" code in `boot_renesas_start.S`. If using Big Endian change endianness mode in "Debugger -> Debug Tool Settings -> Memory Endian -> Big Endian".
 
 
 ## Renesas RX72N
@@ -2298,7 +2298,7 @@ rfp-cli -if fine -t e2l -device RX72x -auto -auth id FFFFFFFFFFFFFFFFFFFFFFFFFFF
     -run
 ```
 
-Note: Endianess: if using big endian add `-endian big`
+Note: Endianness: if using big endian add `-endian big`
 
 Note: Linux Install E2 Lite USB Driver:
 

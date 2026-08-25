@@ -61,7 +61,7 @@ Alternatively you can use autoconf to run the testsuite as well as the standard 
 make test
 ```
 
-Further details about expected output of the testsuite program can be found in the [Testsuite section](chapter03.md#testsuite). If you want to build only the wolfSSL library and not the additional items (examples, testsuite, benchmark app, etc.), you can run the following command fromthe wolfSSL root directory:
+Further details about expected output of the testsuite program can be found in the [Testsuite section](chapter03.md#testsuite). If you want to build only the wolfSSL library and not the additional items (examples, testsuite, benchmark app, etc.), you can run the following command from the wolfSSL root directory:
 
 ```sh
 make src/libwolfssl.la
@@ -630,7 +630,7 @@ Used for AES key size selection at compile time.
 
 #### NO_AESGCM_AEAD
 
-Used for disabliing TLS cipher suites thst use AES GCM. It is used internally when no AES GCM cipher suites are enabled, but can also be used to limit cipher suites.
+Used for disabliing TLS cipher suites that use AES GCM. It is used internally when no AES GCM cipher suites are enabled, but can also be used to limit cipher suites.
 
 #### NO_ASN_TIME
 
@@ -928,7 +928,7 @@ Disables TLS client authentication support for ED25519. It is used to reduce mem
 
 #### NO_ED448_CLIENT_AUTH
 
-Disables client authentification for ED448.
+Disables client authentication for ED448.
 
 #### NO_FORCE_SCR_SAME_SUITE
 
@@ -980,7 +980,7 @@ This applies to TLS 1.3 only. It allows SHA2-256 to be enabled and usable from w
 
 #### WOLFSSL_BLIND_PRIVATE_KEY
 
-Used as a mask to blind the private key. The blinding is used to proctect aginst Rowhammer attacks.
+Used as a mask to blind the private key. The blinding is used to protect against Rowhammer attacks.
 
 #### WOLFSSL_DTLS13_NO_HRR_ON_RESUME
 
@@ -1029,7 +1029,7 @@ Disables session ticket expiration checking. Session tickets will be accepted re
 
 #### WOLFSSL_NO_TLS12
 
-Define to exlude TLS 1.2.
+Define to exclude TLS 1.2.
 
 #### WOLFSSL_PEM_TO_DER
 
@@ -1591,7 +1591,7 @@ Define for internal testing to induce random malloc failures.
 
 #### WOLFSSL_POST_HANDSHAKE_AUTH
 
-TLS extension, Used for post-handshake authentification.
+TLS extension, Used for post-handshake authentication.
 
 #### WOLFSSL_PSK_MULTI_ID_PER_CS
 
@@ -3204,7 +3204,7 @@ Compiles in a faster mod_exp implementation at the expense of code size.
 
 #### WC_DISABLE_RADIX_ZERO_PAD
 
-Disable printing of leading zero in hexidecimal string output. For example, if this macro is defined, the value 8 will be printed as the string "0x8" but if it is not defined it will be printed as "0x08". Defining this macro can reduce code size.
+Disable printing of leading zero in hexadecimal string output. For example, if this macro is defined, the value 8 will be printed as the string "0x8" but if it is not defined it will be printed as "0x08". Defining this macro can reduce code size.
 
 #### WC_ASN_NAME_MAX
 
@@ -3569,7 +3569,7 @@ Enables "non blocking" mode for Single Precision math, which will return FP_WOUL
 
 ##### WOLFSSL_SP_FAST_NCT_EXPTMOD
 
-Enables the faster non-constant time modular exponentation implementation. Will only be used for public key operations; not private key operations.
+Enables the faster non-constant time modular exponentiation implementation. Will only be used for public key operations; not private key operations.
 
 ##### WOLFSSL_SP_INT_NEGATIVE
 
@@ -4816,7 +4816,7 @@ Enables Apache httpd support
 
 ### `--enable-afalg`
 
-Enables use of Linux module AF\_ALG for hardware accleration. Additional Xilinx use with `=xilinx`, `=xilinx-rsa`, `=xilinx-aes`, `=xilinx-sha3`
+Enables use of Linux module AF\_ALG for hardware acceleration. Additional Xilinx use with `=xilinx`, `=xilinx-rsa`, `=xilinx-aes`, `=xilinx-sha3`
 
 Is similar to [`--enable-devcrypto`](#--enable-devcrypto) in that it leverages a Linux kernel module (AF\_ALG) for offloading crypto operations. On some hardware the module has performance accelerations available through the Linux crypto drivers. In the case of Petalinux with Xilinx the flag `--enable-afalg=xilinx` can be used to tell wolfSSL to use the Xilinx interface for AF\_ALG.
 
@@ -4846,7 +4846,7 @@ Enables support for single PSK ID with TLS 1.3
 
 Enable crypto callbacks. Register a crypto callback using wc_CryptoCb_RegisterDevice and set the associated devId using wolfSSL_CTX_SetDevId.
 
-The following two defines can be used with `--enable-cryptocb` to complie out RSA or ECC software fallback to optimize for footprint reduction when software RSA/ECC is not required.
+The following two defines can be used with `--enable-cryptocb` to compile out RSA or ECC software fallback to optimize for footprint reduction when software RSA/ECC is not required.
 
 * WOLF_CRYPTO_CB_ONLY_RSA - compiles out RSA software crypto fallback
 * WOLF_CRYPTO_CB_ONLY_ECC - compiles out ECC software crypto fallback

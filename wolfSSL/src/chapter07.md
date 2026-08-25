@@ -492,7 +492,7 @@ ret = wc_SignCert(request.bodySz, request.sigType, der, sizeof(der), NULL, &key,
 /* check ret value for error handling, <= 0 indicates a failure */
 ```
 
-Lastly it is time to convert the CSR to PEM format for sending to a CA authority to use in issueing a certificate:
+Lastly it is time to convert the CSR to PEM format for sending to a CA authority to use in issuing a certificate:
 
 ```c
 ret = wc_DerToPem(der, derSz, pem, sizeof(pem), CERTREQ_TYPE);

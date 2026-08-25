@@ -54,7 +54,7 @@ This is the start address of the update partition. If an external memory is used
 
  - `WOLFBOOT_PARTITION_SWAP_ADDRESS`
 
-The address for the swap spaced used by wolfBoot to swap the two firmware images in place, in order to perform a reversable update. The size of the SWAP partition is exactly one sector on the flash. If an external memory is used, the variable contains the offset of the SWAP area from the beginning of its addressable space.
+The address for the swap spaced used by wolfBoot to swap the two firmware images in place, in order to perform a reversible update. The size of the SWAP partition is exactly one sector on the flash. If an external memory is used, the variable contains the offset of the SWAP area from the beginning of its addressable space.
 
  - `WOLFBOOT_PARTITION_SIZE`
 

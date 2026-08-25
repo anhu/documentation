@@ -81,7 +81,7 @@ int wolfSSH_SFTP_connect(WOLFSSH* ssh );
 WOLFSSH* ssh;
 ```
 ```
-//after creating a new WOLFSSH structrue
+//after creating a new WOLFSSH structure
 ```
 ```
 wolfSSH_SFTP_connect(ssh);

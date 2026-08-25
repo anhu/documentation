@@ -319,9 +319,9 @@ wolfBoot can interact with TPM2.0 chips thanks to its integration with wolfTPM. 
 
 ### Concept
 
-Typically, systems use Secure Boot to guarantee that the correct and geniune firmware is booted by verifying its signature. Afterwards, this knowledge is unknown to the sytem. The application does not know if the system started in a good known state. Sometimes, this guarantee is needed by the firmware itself. To provide such mechanism the concept of Measured Boot exist.
+Typically, systems use Secure Boot to guarantee that the correct and genuine firmware is booted by verifying its signature. Afterwards, this knowledge is unknown to the system. The application does not know if the system started in a good known state. Sometimes, this guarantee is needed by the firmware itself. To provide such mechanism the concept of Measured Boot exist.
 
-Measured Boot can be used to check every start-up component, including settings and user information(user partition). The result of the checks is then stored into special registers called PCR. This process is called PCR Extend and is refered to as a TPM measurement. PCR registers can be reset only on TPM power-on.
+Measured Boot can be used to check every start-up component, including settings and user information(user partition). The result of the checks is then stored into special registers called PCR. This process is called PCR Extend and is referred to as a TPM measurement. PCR registers can be reset only on TPM power-on.
 
 Having TPM measurements provide a way for the firmware or Operating System(OS), like Windows or Linux, to know that the software loaded before it gained control over system, is trustworthy and not modified.
 
@@ -356,7 +356,7 @@ Any TPM has a minimum of 24 PCR registers. Their typical use is as follows:
 
 Recommendations for choosing a PCR index:
 
-- During development it is recommended to use PCR16 that is intented for testing.
+- During development it is recommended to use PCR16 that is intended for testing.
 - In production, if you are running a bare-metal firmware or RTOS, you could use almost all PCRs(PCR0-15), except the one for DRTM and Trusted OS(PCR17-23).
 - If you are running Linux or Windows, PCR12-15 can be chosen for production ready firmware, in order to avoid conflict with other software that might be using PCRs from within Linux, like the Linux IMA or Microsoft Bitlocker.
 
@@ -538,7 +538,7 @@ The tool also adds all the required Tags to the image header, containing the sig
 
 wolfBoot can update itself if `RAM_CODE` is set. This procedure operates almost the same as firmware update with a few key differences. The header of the update is marked as a bootloader update (use `--wolfboot-update` for the sign tools).
 
-The new signed wolfBoot image is loaded into the UPDATE parition and triggered the same as a firmware update. Instead of performing a swap, after the image is validated and signature verified, the bootloader is erased and the new image is written to flash. This operation is _not_ safe from interruption. Interruption will prevent the device from rebooting.
+The new signed wolfBoot image is loaded into the UPDATE partition and triggered the same as a firmware update. Instead of performing a swap, after the image is validated and signature verified, the bootloader is erased and the new image is written to flash. This operation is _not_ safe from interruption. Interruption will prevent the device from rebooting.
 
 wolfBoot can be used to deploy new bootloader versions as well as update keys.
 
@@ -657,7 +657,7 @@ Encryption of external partition works at the level of the external flash interf
 
 All write calls to external partitions from the bootloader perform an additional encryption step to hide the actual content of the external non-volatile memory.
 
-Viceversa, all read operations will decrypt the data stored when the feature is enabled.
+Vice versa, all read operations will decrypt the data stored when the feature is enabled.
 
 An extra option is provided to the `sign` tool to encrypt the firmware update after signing it, so
 that it can be stored as is in the external memory by the application, and will be decrypted by the bootloader

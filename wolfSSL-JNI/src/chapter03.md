@@ -192,7 +192,7 @@ The project looks for the directory
 This can added in multiple ways:
 
 - OPTION A: Download the latest wolfSSL library release from www.wolfssl.com,
-unzip it, rename it to `wolfssl`, and place it in the direcotry
+unzip it, rename it to `wolfssl`, and place it in the directory
 `wolfssljni/IDE/Android/app/src/main/cpp/`.
 
 ```
@@ -251,7 +251,7 @@ cd examples/provider
 ./convert-to-bks.sh <path/to/provider>
 ```
 
-For exmaple, when using bcprov-ext-jdk15on-169.jar:
+For example, when using bcprov-ext-jdk15on-169.jar:
 
 ```
 cd examples/provider

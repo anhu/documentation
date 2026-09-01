@@ -4,7 +4,7 @@
 
 Example: I received wolfssl-4.8.1-commercial-fips-ARMv8-A-v2 but the validation was for version 4.5.4, why did I receive a 4.8.1 release?
 
-A: The version validated (IE 4.5.4 from the exmaple) applies to the wolfCrypt module ONLY. It was loosely based off the wolfSSL library version at the time of validattion however the wolfSSL version will continue to update as enhancements and fixes are applied in subsequent releases. You will alwasy receive the latest release with the proper wolfCrypt module (v4.5.4 in the exam-ple) inside even though the wolfSSL version (4.8.1 in the example_ continues to update over time! If you have any questions on this, contact us at fips@wolfssl.com or support@wolfssl.com
+A: The version validated (IE 4.5.4 from the example) applies to the wolfCrypt module ONLY. It was loosely based off the wolfSSL library version at the time of validattion however the wolfSSL version will continue to update as enhancements and fixes are applied in subsequent releases. You will always receive the latest release with the proper wolfCrypt module (v4.5.4 in the exam-ple) inside even though the wolfSSL version (4.8.1 in the example_ continues to update over time! If you have any questions on this, contact us at fips@wolfssl.com or support@wolfssl.com
 
 ## How do I know if I am using the FIPS module?
 
@@ -46,7 +46,7 @@ from [https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Module-Validation-
 
 A: It exists for two select exception cases:
 
-1. The first exception is when an operating system would perform a memory zero during an application start that would erase the POST result (pass/fail) and therefore the POST must be called AFTER the memory zero. To remain FIPS compliant the call must be proven to the CMVP to be not optional and not require operator intervention to trigger (has to be called by the OS before control is returnd to the user-space app or kernel module).
+1. The first exception is when an operating system would perform a memory zero during an application start that would erase the POST result (pass/fail) and therefore the POST must be called AFTER the memory zero. To remain FIPS compliant the call must be proven to the CMVP to be not optional and not require operator intervention to trigger (has to be called by the OS before control is returned to the user-space app or kernel module).
 
 2. The second exception is when an entropy source can not be made available to the attribute constructor. In this case the RNG has to be initialized first and then the call to fipsEntry() made. Again the call must be proven to the CMVP to be not optional requiring no operator intervention to trigger (has to be called by the OS before control is returned to the user-space app or kernel module).
 
@@ -54,7 +54,7 @@ A: It exists for two select exception cases:
 
 A: Only wolfSSL staff in collaboration with an NVLAP accredited FIPS lab during an OE operational testing effort can determine the viability of the feature NO_ATTRIBUTE_CONSTRUCTOR. If the feature is warranted for a specific operating environment:
  
-1. It will be noted in the FIPS user guide section for that operating environement
+1. It will be noted in the FIPS user guide section for that operating environment
 
 2. The bundle releases the customer receives from wolfSSL will build cleanly with the feature enabled (no compile time error)
 
@@ -62,7 +62,7 @@ A: Only wolfSSL staff in collaboration with an NVLAP accredited FIPS lab during 
 
 ### Followup Post Q: What about with fips-ready, can I use NO_ATTRIBUTE_CONSTRUCTOR with fips-ready?
 
-A: The term "fips-ready' implies a module is abiding by ALL the FIPS requirements such that it could be submitted to the CMVP without any changes and achieve FIPS certification. Using the feature NO_ATTRIBUTE_CONSTRUCTOR without wolfSSL staff and an NVLAP accredited FIPS lab approving it for that operating environement would imply the fips-ready solution is no longer a fips-ready release, that release would no longer be considered "fips-ready" until reviewed by wolfSSL staff in collaboration with an NVLAP accredited FIPS lab.
+A: The term "fips-ready' implies a module is abiding by ALL the FIPS requirements such that it could be submitted to the CMVP without any changes and achieve FIPS certification. Using the feature NO_ATTRIBUTE_CONSTRUCTOR without wolfSSL staff and an NVLAP accredited FIPS lab approving it for that operating environment would imply the fips-ready solution is no longer a fips-ready release, that release would no longer be considered "fips-ready" until reviewed by wolfSSL staff in collaboration with an NVLAP accredited FIPS lab.
 
 ## What can go wrong for the end user after basic testing?
 
@@ -82,7 +82,7 @@ A: (Multi-part)
 
 	5. Windows: Randomized base addressing in Windows OS. Because the function addresses are included in the integrity check, the module needs to load at the same location in memory each time. There are 2 factors to this one: 
 
-		1. Must diable Random base address at the project level. Example: [https://github.com/wolfSSL/wolfssl/blob/master/IDE/WIN10/wolfssl-fips.vcxproj#L159](https://github.com/wolfSSL/wolfssl/blob/master/IDE/WIN10/wolfssl-fips.vcxproj#L159)
+		1. Must disable Random base address at the project level. Example: [https://github.com/wolfSSL/wolfssl/blob/master/IDE/WIN10/wolfssl-fips.vcxproj#L159](https://github.com/wolfSSL/wolfssl/blob/master/IDE/WIN10/wolfssl-fips.vcxproj#L159)
 
 		2. Must assign a physical fixed address (and this is KEY!!) that is NOT in contention with any other DLL on the system. Example: [https://github.com/wolfSSL/wolfssl/blob/master/IDE/WIN10/wolfssl-fips.vcxproj#L158](https://github.com/wolfSSL/wolfssl/blob/master/IDE/WIN10/wolfssl-fips.vcxproj#L158)
 
@@ -119,7 +119,7 @@ wolfCrypt_SetCb_fips(myFipsCb);
 
 2. wolfSSL Inc also wanted an option available should one wish to call one of the ESV validated entropy sources so a callback option made sense.
 
-## Will my applications that are linked agaist the 140-2 module still work with the 140-3 module?
+## Will my applications that are linked against the 140-2 module still work with the 140-3 module?
 
 A: Absolutely! wolfCrypt FIPS modules v2.x (cert #3389, 140-2 module) has 100% API compatibility minus the 3DES services with wolfCrypt FIPS module v5.2.1 (cert #4718, 140-3 module). In addition to the 140-2 APIs, there are new services (TLS KDFs, AES-OFB, etc) and newer extended APIs. For a full list of new services and new API definitions supported by the 140-3 module please refer to the FIPS 140-3 User Guide [UG] which includes an exhaustive list of every FIPS service and correlated API + description(s). If you need a copy of the [UG] please let the wolfSSL team know by emailing support@wolfssl.com requesting a copy of the FIPS [UG]. 
 
@@ -312,7 +312,7 @@ PRIVATE_KEY_LOCK() ;
 ```
 
 The key access can optionally be unlocked\* only once on startup and locked again prior to shutdown\*\* or... If the application wishes to be very strict, these can be called immediately before and after each call that involves a private key load or use.
-\*Be aware that LOCK and UNLOCK are **thread-local**. Aas this is a semaphore, each UNLOCK must be paired with a corresponding LOCK at the same scope to properly decrement the lock count. Alternatively doing a "true lock" (example provided below) may be the best approach for proper lock management. 
+\*Be aware that LOCK and UNLOCK are **thread-local**. As this is a semaphore, each UNLOCK must be paired with a corresponding LOCK at the same scope to properly decrement the lock count. Alternatively doing a "true lock" (example provided below) may be the best approach for proper lock management. 
 \*\* "application ***shall*** lock again before terminating" - This is a documentation requirement, this is not enforced at run-time by any error or prevention from exiting. Failing to re-lock key access before exiting makes the application "not FIPS compliant" however.
 
 

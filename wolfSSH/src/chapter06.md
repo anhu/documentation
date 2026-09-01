@@ -40,7 +40,7 @@ The example echo server implements the authentication callback with sample users
 ```
 wolfSSH_SetUserAuth(ctx, wsUserAuth);
 ```
-The example password file (passwd.txt) is a simple list of usernames and passwords seperated with a colon respectively. The defaults that exist within this file are as follows.
+The example password file (passwd.txt) is a simple list of usernames and passwords separated with a colon respectively. The defaults that exist within this file are as follows.
 
 ```   
 jill:upthehill

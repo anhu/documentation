@@ -720,7 +720,7 @@ This separation ensures that cryptographic keys are protected even if the main p
 
 1. Verify SPI clock polarity and phase (typically CPOL=0, CPHA=0 for TPM)
 2. Check SPI clock speed - start with a slower speed (1-10 MHz) and increase
-3. Verify chip select is asserted low during entire send/recieve
+3. Verify chip select is asserted low during entire send/receive
 4. Some TPMs require wait states during SPI operations which requires extra bytes until the MSB is set to signal response readiness (enabled with `WOLFTPM_CHECK_WAIT_STATE`)
 5. Enable debug output with `#define DEBUG_WOLFTPM` (general), `WOLFTPM_DEBUG_VERBOSE` (detailed), or `WOLFTPM_DEBUG_IO` (SPI/I2C transactions)
 

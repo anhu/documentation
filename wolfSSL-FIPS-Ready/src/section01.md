@@ -32,7 +32,7 @@ is swapped by the headers so that the FIPS wrappers will be called either way.
 The FIPS wrapper functions check the status of the internal self-testing before 
 calling the actual function. If the CAST for that specific algorithm has not 
 been run at least one time previously it will run the first time the algorithm 
-is used. Users now have the option to either pre-emptively test algorithms at 
+is used. Users now have the option to either preemptively test algorithms at 
 start up if they wish to avoid the test running at a later time or they can 
 just let the test run when the algorithm is used.
 

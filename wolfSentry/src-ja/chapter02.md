@@ -94,7 +94,7 @@ make SINGLETHREADED=1 EXTRA_CFLAGS='-DWOLFSENTRY_NO_CLOCK_BUILTIN'
 |`WOLFSENTRY_NO_ERROR_STRINGS` | エラー文字列関数へのエラー コードを無効にする |
 |`WOLFSENTRY_NO_MALLOC_BUILTINS` | 組み込みの malloc 関数を無効にする |
 |`WOLFSENTRY_HAVE_NONGNU_ATOMICS` | アトミックは非 GNU です (`SINGLETHREADED` が設定されている場合は無視されます) |
-|`WOLFSENTRY_NO_CLOCK_BUILTIN` | Bulitin 時間関数を使用しないでください |
+|`WOLFSENTRY_NO_CLOCK_BUILTIN` | Built-in 時間関数を使用しないでください |
 |`WOLFSENTRY_LWIP` | wolfSentry は BSD ソケットではなく LWIP に対して構築されています |
 |`FREERTOS` | FreeRTOS サポートでビルド |
 

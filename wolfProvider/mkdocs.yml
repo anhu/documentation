@@ -5,7 +5,7 @@ site_dir: html/
 copyright: Copyright © 2024 wolfSSL Inc.
 nav:
     - "1. Introduction": index.md
-    - "2. OpenSSL Version Compatability": chapter02.md
+    - "2. OpenSSL Version Compatibility": chapter02.md
     - "3. Building wolfProvider": chapter03.md
     - "4. FIPS 140-3 Support": chapter04.md
     - "5. Logging": chapter05.md

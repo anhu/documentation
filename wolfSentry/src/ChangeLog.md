@@ -537,7 +537,7 @@ Fixed copying of route table header fields (table config) when cloning or rebuil
 
 Implemented proper locking in `wolfsentry_route_get_reference()`, and corresponding lock assertion in `wolfsentry_table_cursor_init()`.
 
-Fixed logic in address matching to properly match zero-length addresses when peforming subnet matching, even if the corresponding `_ADDR_WILDCARD` flag bit is clear.
+Fixed logic in address matching to properly match zero-length addresses when performing subnet matching, even if the corresponding `_ADDR_WILDCARD` flag bit is clear.
 
 ## Self-Test Enhancements
 

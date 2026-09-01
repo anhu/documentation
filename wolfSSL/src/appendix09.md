@@ -1,6 +1,6 @@
 # Experimenting with Post-Quantum Cryptography
 
-A while back, the wolfSSL team integrated experimental post-quantum cryptographic algorithms into the wolfSSL library. This was done by integrating with the Open Quantum Safe team's liboqs. Currently, wolfCrypt implements LMS, XMSS, ML-DSA and ML-KEM. So, for the purpose of code size reduction and ease of maintence, the wolfSSL team removed the integration with liboqs.
+A while back, the wolfSSL team integrated experimental post-quantum cryptographic algorithms into the wolfSSL library. This was done by integrating with the Open Quantum Safe team's liboqs. Currently, wolfCrypt implements LMS, XMSS, ML-DSA and ML-KEM. So, for the purpose of code size reduction and ease of maintenance, the wolfSSL team removed the integration with liboqs.
 
 This appendix is intended for anyone that wants to start learning about post-quantum cryptography in the context of (D)TLS 1.3. It explains why post-quantum algorithms are important, what we have done in response to the quantum threat and how you can start experimenting with these new algorithms.
 
@@ -47,7 +47,7 @@ These use different kinds of math from the conventional algorithms. They are des
           as NIST is not considering them for standardization.
 
 **Note**: When the liboqs integration was removed, we also removed the FALCON
-          and SPHINCS+ signature schemes. We will have our own implmentations
+          and SPHINCS+ signature schemes. We will have our own implementations
           in the future.
 
 An explanation of lattice-based cryptography would fall outside the scope of this document but more information about these algorithms can be found in their NIST submissions at <https://csrc.nist.gov/projects/post-quantum-cryptography/round-3-submissions>.

@@ -30,7 +30,7 @@ I hear you fa shizzle!
 
 ## wolfSentry Examples
 
-Examples are loacated in wolfSentry rero, `<wolfSentry root>/examples`
+Examples are located in wolfSentry rero, `<wolfSentry root>/examples`
 
 ### wolfSentry lwIP Echo Test
 

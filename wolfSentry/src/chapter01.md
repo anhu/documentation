@@ -1,6 +1,6 @@
 # Introduction
 
-This manual is writen as a technical guide to the wolfSentry embedded Intrusion Detection Protection System (IDPS). It will explain how to build and get started with wolfSentry, provide an overview of build options, features, portability enhancements, support, and much more.
+This manual is written as a technical guide to the wolfSentry embedded Intrusion Detection Protection System (IDPS). It will explain how to build and get started with wolfSentry, provide an overview of build options, features, portability enhancements, support, and much more.
 
 ## Why Choose wolfSentry?
 
